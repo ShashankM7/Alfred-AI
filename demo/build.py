@@ -6,7 +6,7 @@ simulated PC that shows what Alfred does.
 
 Writes two copies of the demo:
   DIR/site/      a static site for GitHub Pages. Pages serves it from a subpath
-                 (https://dhruvavalluru.github.io/Jarvis-Hacks/), so every URL in it is relative.
+                 (https://shashankm7.github.io/HackNC2026-AlfredAI/), so every URL in it is relative.
   DIR/artifact/  the same demo for a claude.ai artifact: the main page has no <!doctype>, <html>, <head>
                  or <body> (the host wraps it) and starts with its <title>; the other files sit next to it.
 DIR is demo/dist unless --out says otherwise. --ui reads the app's UI from another folder (for tests).
@@ -34,7 +34,7 @@ UI = MVP / "jarvis" / "app" / "ui"
 TITLE = "Alfred Live Demo"
 # The only other sites the demo links to, both in the demo's banner: how to install Alfred on Windows, and
 # the source. (Not /releases/latest until a release exists: today that's an empty page.)
-REPO = "https://github.com/DhruvaValluru/Jarvis-Hacks"
+REPO = "https://github.com/ShashankM7/HackNC2026-AlfredAI"
 INSTALL = f"{REPO}/tree/main/windows-mvp#readme"
 ALLOWED_URLS = {REPO, INSTALL}
 

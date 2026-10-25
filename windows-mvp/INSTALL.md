@@ -1,5 +1,7 @@
 # Install Alfred (Windows app)
 
+The installer link below points to the original upstream project. For this standalone repository, [run from source](README.md#start-in-2-minutes) or build an installer from this repository; upstream downloads do not include standalone changes.
+
 Alfred also comes as a normal Windows app: an installer wizard, a Start menu shortcut, and an uninstaller in Settings. No Python, no `setup.bat`, no command line. Using the app is described in [DESKTOP.md](DESKTOP.md).
 
 ## What you need

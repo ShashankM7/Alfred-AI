@@ -3,7 +3,7 @@
 //   node demo/tests/e2e.mjs [--shots DIR] [--speed N] [--only main|setup|artifact|typed] [--verbose]
 //
 // It builds the demo into a temporary folder (python3 demo/build.py --out ...), serves the site under a
-// subpath (/Jarvis-Hacks/, as GitHub Pages does) and the artifact copy at /artifact/ with
+// subpath (/HackNC2026-AlfredAI/, as GitHub Pages does) and the artifact copy at /artifact/ with
 // python3 -m http.server, then drives them like a judge would: every example button, Allow and Deny,
 // an approval left to expire, STOP in the middle of a run (button, and Esc then Enter), two commands
 // in a row, Settings, Activity, and the setup replayed to the end and back. Everything runs at 1280x800
@@ -60,7 +60,7 @@ if (built.status !== 0) {
   process.exit(1);
 }
 const served = join(work, "serve");
-cpSync(join(work, "dist", "site"), join(served, "Jarvis-Hacks"), { recursive: true });
+cpSync(join(work, "dist", "site"), join(served, "HackNC2026-AlfredAI"), { recursive: true });
 cpSync(join(work, "dist", "artifact"), join(served, "artifact"), { recursive: true });
 // The artifact's host wraps its main page in a document; do the same, so it isn't shown in quirks mode.
 const main = readFileSync(join(served, "artifact", "index.html"), "utf8");
@@ -189,13 +189,13 @@ const gap = (page) => page.$eval("#log", (log) => Math.round(log.scrollHeight - 
 // --- the main window --------------------------------------------------------------------------------------------
 async function mainWindow(browser, view) {
   const { context, page } = await open(browser, view);
-  await page.goto(`${ORIGIN}/Jarvis-Hacks/`);
+  await page.goto(`${ORIGIN}/HackNC2026-AlfredAI/`);
   await ready(page);
   const log = await page.locator("#log").innerText();
   check(log.includes("Open Notepad and write a shopping list") && log.includes("Example"), "opens with the example conversation");
   check(await page.locator(".demo-bar").getByText("simulated PC").count() > 0, "the banner says it's a simulated PC");
   check(await page.locator("#demo-pc .demo-pc__title").textContent() === "Simulated PC", "the panel is titled Simulated PC");
-  check(await page.locator('a[href="https://github.com/DhruvaValluru/Jarvis-Hacks/tree/main/windows-mvp#readme"]').count() === 1,
+  check(await page.locator('a[href="https://github.com/ShashankM7/HackNC2026-AlfredAI/tree/main/windows-mvp#readme"]').count() === 1,
     "links how to install on Windows");
   await noSideScroll(page, "the main window");
   await shot(page, "1-main");
@@ -373,9 +373,9 @@ async function mainWindow(browser, view) {
   // the setup, replayed to the end and back
   await page.click('.tab[data-view="home"]');
   await page.click("#demo-replay");
-  await page.waitForURL(/\/Jarvis-Hacks\/onboarding\/index\.html/);
+  await page.waitForURL(/\/HackNC2026-AlfredAI\/onboarding\/index\.html/);
   await setup(page);
-  await page.waitForURL(/\/Jarvis-Hacks\/index\.html$/);
+  await page.waitForURL(/\/HackNC2026-AlfredAI\/index\.html$/);
   await ready(page);
   check((await page.locator("#log").innerText()).includes("That was the example"), "back on the main window after the setup");
   n = await replyCount(page);
@@ -448,7 +448,7 @@ async function setup(page) {
 // An approval nobody answers: "nobody in time", then the same answer as a No.
 async function expiry(browser, view) {
   const { context, page } = await open(browser, { ...view, test: { approvalTimeout: 2 } });
-  await page.goto(`${ORIGIN}/Jarvis-Hacks/index.html`);
+  await page.goto(`${ORIGIN}/HackNC2026-AlfredAI/index.html`);
   await ready(page);
   const n = await replyCount(page);
   await chip(page, "Email Sam");
@@ -462,14 +462,14 @@ async function expiry(browser, view) {
 // Leaving a replayed setup half way: the main window opens on the set-up PC again, not the setup.
 async function leaveSetup(browser, view) {
   const { context, page } = await open(browser, view);
-  await page.goto(`${ORIGIN}/Jarvis-Hacks/`);
+  await page.goto(`${ORIGIN}/HackNC2026-AlfredAI/`);
   await ready(page);
   await page.click("#demo-replay");
   await page.locator('.step[data-step="welcome"]').waitFor({ state: "visible" });
   await page.click("#demo-back");
-  await page.waitForURL(/\/Jarvis-Hacks\/index\.html$/);
+  await page.waitForURL(/\/HackNC2026-AlfredAI\/index\.html$/);
   await ready(page);
-  check(page.url().endsWith("/Jarvis-Hacks/index.html"), "Back to the demo returns to the main window");
+  check(page.url().endsWith("/HackNC2026-AlfredAI/index.html"), "Back to the demo returns to the main window");
   await page.click('.tab[data-view="settings"]');
   await page.locator(".secret .state.set", { hasText: "sk-ant-...4f2c" }).waitFor({ timeout: 10000 });
   check(true, "the set-up PC's key is back");
@@ -539,7 +539,7 @@ const TYPED = [
 
 async function typed(browser, view) {
   const { context, page } = await open(browser, view);
-  await page.goto(`${ORIGIN}/Jarvis-Hacks/`);
+  await page.goto(`${ORIGIN}/HackNC2026-AlfredAI/`);
   await ready(page);
   const asked = () => page.locator("#log .entry", { hasText: "Alfred asked:" }).count();
   const clicks = () => page.locator("#log .entry.step", { hasText: "left_click" }).count();
@@ -574,7 +574,7 @@ async function typed(browser, view) {
 // STOP while Outlook types the email: the body keeps only what was typed (slowed down to catch it).
 async function stopWhileTyping(browser, view) {
   const { context, page } = await open(browser, { ...view, speed: 0.5 });
-  await page.goto(`${ORIGIN}/Jarvis-Hacks/`);
+  await page.goto(`${ORIGIN}/HackNC2026-AlfredAI/`);
   await ready(page);
   await chip(page, "Email Sam");
   await line(page, "'field': 'Message body'");
@@ -590,7 +590,7 @@ async function stopWhileTyping(browser, view) {
 // simulated PC's Hide and Show (phones).
 async function follows(browser, view) {
   const { context, page } = await open(browser, view);
-  await page.goto(`${ORIGIN}/Jarvis-Hacks/`);
+  await page.goto(`${ORIGIN}/HackNC2026-AlfredAI/`);
   await ready(page);
   let n = await replyCount(page);
   await chip(page, "How's my PC");

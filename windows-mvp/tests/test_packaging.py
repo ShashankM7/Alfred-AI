@@ -194,7 +194,7 @@ def test_a_release_publishes_the_installer_ci_checked():
         assert placeholder in notes and f"'{placeholder}'" in script
     assert "Run anyway" in notes and ".Hash.ToLower()" in notes  # Get-FileHash alone shows upper case
     demo = next(s for s in release["steps"] if s.get("id") == "prep")["env"]["DEMO_URL"]
-    assert demo == "https://dhruvavalluru.github.io/Jarvis-Hacks/" and 'grep -v -F "$DEMO_URL"' in script
+    assert demo == "https://shashankm7.github.io/HackNC2026-AlfredAI/" and 'grep -v -F "$DEMO_URL"' in script
     assert len([line for line in notes.splitlines() if demo in line]) == 1  # what's left out when it doesn't load
 
 

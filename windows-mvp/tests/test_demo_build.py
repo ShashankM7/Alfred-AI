@@ -14,7 +14,7 @@ import pytest
 ROOT = Path(__file__).resolve().parents[2]
 BUILD = ROOT / "demo" / "build.py"
 UI = ROOT / "windows-mvp" / "jarvis" / "app" / "ui"
-REPO = "https://github.com/DhruvaValluru/Jarvis-Hacks"
+REPO = "https://github.com/ShashankM7/HackNC2026-AlfredAI"
 ALLOWED = {REPO, f"{REPO}/tree/main/windows-mvp#readme"}  # the source, and how to install on Windows
 URL = re.compile(r"""https?://[^\s"'<>()\\`]+""")
 

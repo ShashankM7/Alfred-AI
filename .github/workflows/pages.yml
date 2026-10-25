@@ -1,5 +1,5 @@
 # Publishes Alfred's web demo (demo/: the app's UI on a simulated PC, in the browser) to GitHub Pages:
-# https://dhruvavalluru.github.io/Jarvis-Hacks/
+# https://shashankm7.github.io/HackNC2026-AlfredAI/
 # `python3 demo/build.py` writes the static site to demo/dist/site/. This job puts that folder on the gh-pages
 # branch as one fresh commit (force-pushed, with .nojekyll so Pages serves the files as they are), using only git
 # and the workflow's own token. A commit without demo/build.py has no demo yet: the run warns, publishes nothing

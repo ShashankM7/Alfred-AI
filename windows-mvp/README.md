@@ -6,7 +6,7 @@ A voice assistant for one Windows 10/11 PC. It opens apps and works inside them 
 
 ## Start in 2 minutes
 
-1. Download this repo (green **Code** button, then **Download ZIP**) and unzip it, or `git clone` it. Until computer use is merged, it lives on the `eshaan-work` branch: `git clone -b eshaan-work https://github.com/DhruvaValluru/Jarvis-Hacks.git`. In PowerShell, go to the folder with `cd Jarvis-Hacks\windows-mvp`. Can't find it? Run `Get-ChildItem $HOME -Recurse -Directory -Filter windows-mvp -ErrorAction SilentlyContinue`.
+1. Download this repo (green **Code** button, then **Download ZIP**) and unzip it, or run `git clone https://github.com/ShashankM7/HackNC2026-AlfredAI.git`. In PowerShell, go to the folder with `cd HackNC2026-AlfredAI\windows-mvp`.
 2. Double-click **`windows-mvp\setup.bat`**. It finds or installs Python 3.12, installs the packages and asks for your [Anthropic API key](https://platform.claude.com/settings/keys).
 3. Double-click **`windows-mvp\jarvis.bat`**.
 4. Press **Enter** and talk, or type a command.
@@ -19,7 +19,7 @@ The first voice command downloads the speech model (about 150 MB). With no API k
 
 ## Install the Alfred app (installer)
 
-Don't want Python and batch files? Download **`Alfred-Setup-<version>.exe`** from the [latest release](https://github.com/DhruvaValluru/Jarvis-Hacks/releases/latest), a normal Windows installer: no admin rights, Start menu shortcut, uninstall from Settings > Apps. Every CI run also builds one (the **Alfred-Setup** artifact of the `alfred-desktop` run on your PR's Checks tab). [INSTALL.md](INSTALL.md) says what to click when SmartScreen says "Unknown publisher" (Alfred isn't signed yet), how to uninstall or build it yourself, and how to cut a release.
+Don't want Python and batch files? Download **`Alfred-Setup-<version>.exe`** from the [latest upstream release (not a build of this standalone repository)](https://github.com/DhruvaValluru/Jarvis-Hacks/releases/latest), a normal Windows installer: no admin rights, Start menu shortcut, uninstall from Settings > Apps. Every CI run also builds one (the **Alfred-Setup** artifact of the `alfred-desktop` run on your PR's Checks tab). [INSTALL.md](INSTALL.md) says what to click when SmartScreen says "Unknown publisher" (Alfred isn't signed yet), how to uninstall or build it yourself, and how to cut a release.
 
 ## Getting your API key
 

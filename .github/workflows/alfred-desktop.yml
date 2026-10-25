@@ -109,7 +109,7 @@ jobs:
         id: prep
         env:
           EXTRA_NOTES: ${{ inputs.notes }}
-          DEMO_URL: https://dhruvavalluru.github.io/Jarvis-Hacks/
+          DEMO_URL: https://shashankm7.github.io/HackNC2026-AlfredAI/
         run: |
           version=$(sed -n 's/^__version__ = "\([^"]*\)".*/\1/p' windows-mvp/jarvis/__init__.py)
           if [ -z "$version" ]; then echo "::error::No __version__ in windows-mvp/jarvis/__init__.py."; exit 1; fi

@@ -7,8 +7,8 @@ type or click a command, and you see what Alfred does: the same status lines, ap
 activity log as the Windows app, while the simulated PC shows the work.
 
 It never touches the viewer's computer. A banner says so on every page, and links to
-[how to install Alfred on Windows](https://github.com/DhruvaValluru/Jarvis-Hacks/tree/main/windows-mvp#readme)
-and the [source](https://github.com/DhruvaValluru/Jarvis-Hacks). (The install link goes to the README, not to
+[how to install Alfred on Windows](https://github.com/ShashankM7/HackNC2026-AlfredAI/tree/main/windows-mvp#readme)
+and the [source](https://github.com/ShashankM7/HackNC2026-AlfredAI). (The install link goes to the README, not to
 `/releases/latest`, until there is a release: until then that is an empty page.) There is no AI behind it:
 each command is matched to one of a few scripted examples. A command that names someone, a file, an app or a
 form the example doesn't have (email my boss, copy my photos, fill in my tax form, open Chrome) gets an honest
@@ -28,7 +28,7 @@ python3 -m http.server 8000      # then open http://localhost:8000/
 Python 3 only, no packages. `--out DIR` writes somewhere else. The build stops with a message if the
 app's UI changed in a way the demo doesn't expect (see below), instead of making a broken demo.
 
-- **`dist/site/`** is a static site for GitHub Pages, which serves it from a subpath (`/Jarvis-Hacks/`), so
+- **`dist/site/`** is a static site for GitHub Pages, which serves it from a subpath (`/HackNC2026-AlfredAI/`), so
   every URL in it is relative. It has a `.nojekyll`.
 - **`dist/artifact/`** is the same demo for a claude.ai artifact. Its `index.html` has no `<!doctype>`,
   `<html>`, `<head>` or `<body>` (the host wraps it) and starts with `<title>Alfred Live Demo</title>`.
@@ -40,7 +40,7 @@ Either way, open the link in a private window (signed out) and try a few example
 
 - **GitHub Pages:** a workflow runs `python3 demo/build.py` and puts `demo/dist/site/` on Pages, and the repo
   owner turns Pages on once (Settings > Pages). Workflows are area G's (`docs/TASKS.md`), so that is its own
-  PR. The address is then `https://dhruvavalluru.github.io/Jarvis-Hacks/`.
+  PR. The address is then `https://shashankm7.github.io/HackNC2026-AlfredAI/`.
 - **claude.ai artifact:** publish `demo/dist/artifact/index.html` as the page, with every other file in
   `demo/dist/artifact/` at the same path next to it. It starts private; share it to give out the link.
 

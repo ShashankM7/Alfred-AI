@@ -18,10 +18,10 @@ You need:
 - **Python 3.10 or newer** from [python.org](https://www.python.org/downloads/). On Windows, tick "Add python.exe to PATH" in the installer. On a Mac, also double-click **Install Certificates.command** in the Python folder it opens afterwards.
 - **An OpenAI API key** from [platform.openai.com](https://platform.openai.com) with credits added. GPT-Live-1 may require verifying your organization in OpenAI's settings first.
 
-**1. Get the code.** On GitHub, switch to the `jarvisvoice` branch, click **Code → Download ZIP**, and unzip it. Or, with git:
+**1. Get the code.** On GitHub, use the `main` branch, click **Code → Download ZIP**, and unzip it. Or, with git:
 
 ```bash
-git clone -b jarvisvoice https://github.com/DhruvaValluru/Jarvis-Hacks.git
+git clone https://github.com/ShashankM7/HackNC2026-AlfredAI.git
 ```
 
 **2. Add your API key.** Open a terminal in the `voice` folder and save the key in a file named `api`, replacing `sk-...` with your key:

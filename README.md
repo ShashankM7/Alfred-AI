@@ -1,6 +1,13 @@
 <p align="center"><img src="docs/alfred-logo.png" alt="Alfred AI: every device, one butler." width="560"></p>
 
-# Alfred
+# HackNC2026-AlfredAI
+
+Standalone repository for Alfred: [ShashankM7/HackNC2026-AlfredAI](https://github.com/ShashankM7/HackNC2026-AlfredAI). Original project history and contributor attribution are preserved.
+
+```bash
+git clone https://github.com/ShashankM7/HackNC2026-AlfredAI.git
+cd HackNC2026-AlfredAI/windows-mvp
+```
 
 A voice and remote control assistant that sees and acts across all your devices.
 
@@ -13,7 +20,7 @@ More detail: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) (general design) · [d
 ## Try Alfred
 
 - **Web demo:** coming soon. It will run in your browser on a simulated PC, so there is nothing to install and nothing happens to your computer.
-- **Download for Windows:** <https://github.com/DhruvaValluru/Jarvis-Hacks/releases/latest>. Under **Assets**, get `Alfred-Setup-<version>.exe`. You need 64-bit Windows 11, or Windows 10 version 1809 or later, and an [Anthropic API key](windows-mvp/README.md#getting-your-api-key); an OpenAI key (voice mode) and Telegram are optional. No admin rights needed. The installer isn't code-signed yet, so if Windows says "Windows protected your PC", click **More info**, then **Run anyway**. More in [INSTALL.md](windows-mvp/INSTALL.md).
+- **Upstream download for Windows (not a release of this standalone repository):** <https://github.com/DhruvaValluru/Jarvis-Hacks/releases/latest>. Under **Assets**, get `Alfred-Setup-<version>.exe`. You need 64-bit Windows 11, or Windows 10 version 1809 or later, and an [Anthropic API key](windows-mvp/README.md#getting-your-api-key); an OpenAI key (voice mode) and Telegram are optional. No admin rights needed. The installer isn't code-signed yet, so if Windows says "Windows protected your PC", click **More info**, then **Run anyway**. More in [INSTALL.md](windows-mvp/INSTALL.md).
 - **Run from source:** [windows-mvp/](windows-mvp/README.md). Open a terminal in `windows-mvp`, then run `setup.bat`, followed by `jarvis.bat` (the console), or `.venv\Scripts\python -m jarvis.app` (the app window).
 
 ## 1. Goals
