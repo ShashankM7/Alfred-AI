@@ -1,6 +1,6 @@
 # Live task board
 
-_Auto-generated 2026-10-25 07:00 UTC from [TASKS.md](TASKS.md), open PRs and branches. Do not edit; changes are overwritten._
+_Auto-generated 2026-10-25 12:36 UTC from [TASKS.md](TASKS.md), open PRs and branches. Do not edit; changes are overwritten._
 
 **Progress:** 33 of 103 tasks done.
 
@@ -102,4 +102,4 @@ First 3 per area. Take the lowest number in your area.
 
 ## Needs attention
 
-- branch `gh-pages` (github-actions[bot], no PR, 1 commits, last 2026-10-11): "Web demo built from 034ff631965b5ef9ecf6177f1e065e0681480d55". Open a draft PR with a task ID.
+- branch `gh-pages` (github-actions[bot], no PR, 1 commits, last 2026-10-25): "Web demo built from 6a110c6d563871b9d2bf7d6c224651b59c57329b". Open a draft PR with a task ID.
